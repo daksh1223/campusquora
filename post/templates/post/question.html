@@ -37,18 +37,21 @@
 
       <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
         <div class="col-md-6 px-0">
-          <h1 class="display-4 font-italic">{{ ques.writer.name }}</h1>
+          <h3 class="pb-4 mb-4 font-italic border-bottom">
+            From {{ques.writer.name}}
+          </h3>
+          <p class="blog-post-meta">{{ques.pubdate}} </p>
           <p class="lead my-3">{{ ques.topic }}</p>
         </div>
       </div>
 
 
       {% for a in ans %}
-      <main role="main" class="container">
+      <main role="main" class="container my-5">
         <div class="row">
           <div class="col-md-8 blog-main">
             <h3 class="pb-4 mb-4 font-italic border-bottom">
-              From {{a.writer.name}}
+              By {{a.writer.name}}
             </h3>
       
             <div class="blog-post">
@@ -57,7 +60,7 @@
               <p>{{a.content}}</p>
               <hr>
             </div>
-          </aside><!-- /.blog-sidebar -->
+         
       
         </div><!-- /.row -->
       

@@ -35,11 +35,15 @@
       </nav>
 
       {% for q in ques %}
-      <div class="jumbotron   rounded  my-0" style="background-color:rgb(108, 168, 218);color:rgb(27, 81, 85) ;" >
+      <div class="jumbotron   rounded  pb-0" style="background-color:rgb(108, 168, 218);color:rgb(27, 81, 85) ;" >
         <div class=" ">
-          <h1 class="display font-italic">{{ q.writer.name }}</h1>
-          <p class="lead my-3">{{ q.topic }}</p>
-          <p class="lead mb-0"><a href="/post/{{user.id}}/{{q.id}}" class=" font-weight-bold" style="background-color:rgb(108, 168, 218);color:rgb(27, 81, 85) ;">Continue reading...</a></p>
+          <h3 class="pb-4 mb-4 font-italic border-bottom">
+            From {{q.writer.name}}
+          </h3>
+          <p class="blog-post-meta">{{q.pubdate}} </p>
+          <p class="lead my-3 font-weight-bold">{{ q.topic }}</p>
+          <small class="lead mb-0"><a href="/post/{{user.id}}/{{q.id}}"  style="color:blue;">Continue reading...</a></small>
+          <hr>
         </div>
       </div>
       {% endfor %}
